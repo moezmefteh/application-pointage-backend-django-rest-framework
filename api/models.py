@@ -3,26 +3,26 @@ from Auth.models import User
 # Create your models here.
 
 class pointage(models.Model):
-    entre   = models.CharField(max_length=30)
-    sortie  = models.CharField(max_length=30)
-    retard  = models.CharField(max_length=30)
-    absance = models.CharField(max_length=30)   
+    entre   = models.CharField(max_length=30,default="None")
+    sortie  = models.CharField(max_length=30,default="None")
+    retard  = models.CharField(max_length=30,default="None")
+    absance = models.CharField(max_length=30,default="None")   
     user    = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class salaire(models.Model):
     mois      = models.IntegerField()
-    heurs_base= models.FloatField()
-    heurs_sup = models.FloatField()
-    primes    = models.FloatField()  
-    total     = models.FloatField()   
+    heurs_base= models.FloatField(default=0)
+    heurs_sup = models.FloatField(default=0)
+    primes    = models.FloatField(default=0)  
+    total     = models.FloatField(default=0)   
     user    = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class mission(models.Model):
-    description= models.CharField(max_length=30)
-    date_debut = models.DateField()
-    date_fin   = models.DateField()
-    lieu       = models.CharField(max_length=30)   
-    état       = models.CharField(max_length=30)   
+    description= models.CharField(max_length=30,default="None")
+    date_debut = models.DateField(default="None")
+    date_fin   = models.DateField(default="None")
+    lieu       = models.CharField(max_length=30,default="None")   
+    état       = models.CharField(max_length=30,default="None")   
     user       = models.ForeignKey(User, on_delete=models.SET_NULL , null=True)
 
