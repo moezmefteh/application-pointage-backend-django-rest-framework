@@ -1,13 +1,9 @@
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from rest_framework.views import APIView
 from Auth.models import *
 from Auth.serializers import *
 from api.models import *
 from api.serializers import *
-from rest_framework import status
 
-from rest_framework.generics import (ListCreateAPIView, RetrieveUpdateDestroyAPIView,RetrieveUpdateAPIView)
+from rest_framework.generics import (ListCreateAPIView,RetrieveUpdateAPIView)
 
 ###############################################################################
 
