@@ -8,6 +8,7 @@ class pointageSerializer(serializers.ModelSerializer):
         fields = ('id',
                   'entre',
                   'sortie',
+                  'date',
                   'retard',
                   'absance',
                   'user'

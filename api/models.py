@@ -5,6 +5,7 @@ from Auth.models import User
 class pointage(models.Model):
     entre   = models.CharField(max_length=30,default="None")
     sortie  = models.CharField(max_length=30,default="None")
+    date    = models.CharField(max_length=30,default="None")
     retard  = models.CharField(max_length=30,default="None")
     absance = models.CharField(max_length=30,default="None")   
     user    = models.ForeignKey(User, on_delete=models.CASCADE)
