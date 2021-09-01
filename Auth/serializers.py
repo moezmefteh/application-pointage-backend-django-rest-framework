@@ -16,9 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
                   'poste',
                   'image',
                   'email',
-                  'telephone',
-                  'is_superuser',
-                  'is_staff']
+                  'telephone']
         extra_kwargs = {
             'password': {'write_only': True}
         }
@@ -30,3 +28,18 @@ class UserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
+
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+                  'first_name',
+                  'last_name',
+                  'cin',
+                  'codeQR',
+                  'poste',
+                  'image',
+                  'email',
+                  'telephone'
+                    ]

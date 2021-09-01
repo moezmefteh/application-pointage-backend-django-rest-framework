@@ -131,7 +131,7 @@ def PropertiesUserUpdate(request,username):
         # put a employe
         elif request.method == 'PUT': 
             data = JSONParser().parse(request) 
-            employes_serializer = UserSerializer(user, data=data) 
+            employes_serializer = UserUpdateSerializer(user, data=data) 
             if employes_serializer.is_valid(): 
                 employes_serializer.save() 
                 return Response( status=status.HTTP_201_CREATED) 
