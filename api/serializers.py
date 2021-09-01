@@ -37,6 +37,6 @@ class missionSerializer(serializers.ModelSerializer):
                   'date_debut',
                   'date_fin',
                   'lieu',
-                  'état',
+                  'etat',
                   'user'
                  )

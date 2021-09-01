@@ -24,6 +24,6 @@ class mission(models.Model):
     date_debut = models.DateField(default="None")
     date_fin   = models.DateField(default="None")
     lieu       = models.CharField(max_length=30,default="None")   
-    état       = models.CharField(max_length=30,default="None")   
+    etat       = models.CharField(max_length=30,default="None")   
     user       = models.ForeignKey(User, on_delete=models.SET_NULL , null=True)
 
