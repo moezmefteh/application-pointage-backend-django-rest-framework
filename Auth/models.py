@@ -8,7 +8,7 @@ class User(AbstractUser):
     last_name= models.CharField(max_length=30)
     cin     = models.IntegerField()
     username= models.CharField(max_length=30,primary_key=True)   
-    password= models.CharField(max_length=30)   
+    password= models.CharField(max_length=255)   
     codeQR  = models.CharField(max_length=255)
     poste   = models.CharField(max_length=30)
     image   = models.CharField(max_length=255,default="not saved")
