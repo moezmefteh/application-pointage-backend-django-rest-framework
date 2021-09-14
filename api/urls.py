@@ -10,10 +10,10 @@ urlpatterns = [
 
     path('pointages/list/',PointageDefineAll.as_view() ),
     path('pointages/<str:pk>/',PointageRetrieve.as_view()), 
+    path('pointage/<str:pk1>/<str:pk2>/',PointageUpdate.as_view()), 
 
     path('missions/list/',MissionDefineAll.as_view() ),
     path('missions/<str:pk>/',MissionRetrieve.as_view()), 
-    # path('missions/<str:pk>/<str:pk>/',MissionUpdate.as_view()), 
 
     path('mission/<int:pk>/start/' ,MissionStarted.as_view()), 
     path('mission/<int:pk>/finish/',MissioFinished.as_view()), 
