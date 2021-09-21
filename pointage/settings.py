@@ -22,6 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-zss1!s*kn&iflos(mgsf5@7-a!xv+se4b#%h8)9d-07h#tl(=4'
 
+REST_AUTH_SERIALIZERS = {
+    'USER_DETAILS_SERIALIZER': 'Auth.serializers.UserSerializer',
+}
+AUTH_USER_MODEL = 'Auth.User'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -42,9 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
 ]
-REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'Auth.serializers.UserSerializer',
-}
+
 
 
 
@@ -133,4 +137,3 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'Auth.User'
